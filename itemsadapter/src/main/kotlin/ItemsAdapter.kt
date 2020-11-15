@@ -60,6 +60,13 @@ public class ItemsAdapter(
         public fun bind(@LayoutRes layoutId: Int, bind: View.() -> Unit = {}): Item {
             return Item(layoutId) { it.bind() }
         }
+
+        /** Binds data onto view with type [V]. */
+        @JvmName("bindTyped")
+        public fun <V : View> bind(@LayoutRes layoutId: Int, bind: V.() -> Unit = {}): Item {
+            @Suppress("UNCHECKED_CAST")
+            return Item(layoutId) { (it as V).bind() }
+        }
     }
 }
 
