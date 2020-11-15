@@ -26,19 +26,13 @@ The simple adapter to render static data in `RecyclerView`.
 Add the dependency:
 ```groovy
 repositories {
-    maven {
-        url("https://nexus.redmadrobot.com/repository/android/")
-        credentials {
-            username = "android-consumer"
-            password = "**************"
-        }
-    }
+    jcenter()
 }
 
 dependencies {
-    implementation("com.redmadrobot.itemsadapter:itemsadapter:0.1")
+    implementation("com.redmadrobot.itemsadapter:itemsadapter:1.0")
     // or if you use viewbinding
-    implementation("com.redmadrobot.itemsadapter:itemsadapter-viewbinding:0.1")
+    implementation("com.redmadrobot.itemsadapter:itemsadapter-viewbinding:1.0")
 }
 ```
 
