@@ -6,7 +6,9 @@ plugins {
 description = "Use ViewBinding for bindings in ItemsAdapter"
 
 dependencies {
-    api(project(":itemsadapter:itemsadapter"))
-    api(androidx.viewbinding)
-    implementation(redmadrobot.viewbinding_ktx)
+    api(project(":itemsadapter"))
+
+    val viewBindingVersion = "4.1.0"
+    api("androidx.databinding:viewbinding:$viewBindingVersion")
+    implementation("com.redmadrobot.extensions:viewbinding-ktx:$viewBindingVersion-0")
 }
