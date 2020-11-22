@@ -11,6 +11,10 @@ plugins {
     `maven-publish`
 }
 
+redmadrobot {
+    android.minSdk = 14
+}
+
 subprojects {
     group = "com.redmadrobot.itemsadapter"
     version = "1.0-SNAPSHOT"
