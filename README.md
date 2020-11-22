@@ -76,6 +76,8 @@ recyclerView.adapter = itemsAdapter(contactsItems) { item ->
 }
 ```
 
+> :exclamation: Note that kotlin synthetics are deprecated since Kotlin 1.4.20, so it is better to use ViewBinding or `findViewById`.
+
 ### `ViewBinding` support
 
 If you use `ViewBinding`, use `itemsadapter-viewbinding` in place of `itemsadapter`.  
@@ -101,7 +103,7 @@ Within `itemsAdapter` block you can use contextual data:
 
 #### Looping mode
 
-Set parameter `isLooping` to `true` to use `ItemsAadpter` in looping mode.
+Set parameter `isLooping` to `true` to use `ItemsAdapter` in looping mode.
 It will only work if you have more than one element in data list.
 
 ## Contributing
