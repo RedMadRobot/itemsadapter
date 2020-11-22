@@ -1,7 +1,4 @@
-import com.redmadrobot.build.extension.credentialsExist
-import com.redmadrobot.build.extension.githubPackages
-import com.redmadrobot.build.extension.isSnapshotVersion
-import com.redmadrobot.build.extension.rmrBintray
+import com.redmadrobot.build.extension.*
 
 plugins {
     val infrastructureVersion = "0.4.1"
@@ -23,7 +20,7 @@ subprojects {
 
     publishing {
         repositories {
-            githubPackages("RedMadRobot/itemsadapter")
+            if (isRunningOnCi) githubPackages("RedMadRobot/itemsadapter")
             if (!isSnapshotVersion && credentialsExist("bintray")) rmrBintray(project.name)
         }
     }
