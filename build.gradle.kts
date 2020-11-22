@@ -14,7 +14,7 @@ redmadrobot {
 
 subprojects {
     group = "com.redmadrobot.itemsadapter"
-    version = "1.0"
+    version = "1.1-SNAPSHOT"
 
     apply(plugin = "maven-publish")
 
