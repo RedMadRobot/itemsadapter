@@ -4,7 +4,7 @@ import com.redmadrobot.build.extension.isSnapshotVersion
 import com.redmadrobot.build.extension.rmrBintray
 
 plugins {
-    val infrastructureVersion = "0.3"
+    val infrastructureVersion = "0.4.1"
     id("redmadrobot.kotlin-library") version infrastructureVersion apply false
     id("redmadrobot.publish") version infrastructureVersion apply false
     id("redmadrobot.detekt") version infrastructureVersion
