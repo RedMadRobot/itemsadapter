@@ -1,12 +1,11 @@
 import com.redmadrobot.build.extension.*
 
 plugins {
-    val infrastructureVersion = "0.4.1"
-    id("redmadrobot.kotlin-library") version infrastructureVersion apply false
-    id("redmadrobot.publish") version infrastructureVersion apply false
-    id("redmadrobot.detekt") version infrastructureVersion
+    id("redmadrobot.root-project") version "0.6"
     `maven-publish`
 }
+
+apply(plugin = "redmadrobot.detekt")
 
 redmadrobot {
     android.minSdk = 14
