@@ -1,7 +1,7 @@
 import com.redmadrobot.build.extension.*
 
 plugins {
-    id("redmadrobot.root-project") version "0.6"
+    id("redmadrobot.root-project") version "0.8"
     `maven-publish`
 }
 
@@ -9,6 +9,7 @@ apply(plugin = "redmadrobot.detekt")
 
 redmadrobot {
     android.minSdk = 14
+    publishing.signArtifacts = true
 }
 
 subprojects {
@@ -20,7 +21,7 @@ subprojects {
     publishing {
         repositories {
             if (isRunningOnCi) githubPackages("RedMadRobot/itemsadapter")
-            if (!isSnapshotVersion && credentialsExist("bintray")) rmrBintray(project.name)
+            if (isReleaseVersion && credentialsExist("ossrh")) ossrh()
         }
     }
 }
