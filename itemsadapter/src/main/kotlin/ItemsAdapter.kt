@@ -102,7 +102,7 @@ public class ItemsAdapter(
  * @see ItemsAdapter
  * @see ItemsAdapter.BindingContext.bind
  */
-public fun <T : Any> itemsAdapter(
+public fun <T> itemsAdapter(
     items: List<T>,
     isLooping: Boolean = false,
     binding: ItemsAdapter.BindingContext.(T) -> ItemsAdapter.Item,
