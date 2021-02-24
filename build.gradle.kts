@@ -9,7 +9,22 @@ apply(plugin = "redmadrobot.detekt")
 
 redmadrobot {
     android.minSdk = 14
-    publishing.signArtifacts = true
+
+    publishing {
+        signArtifacts = true
+
+        pom {
+            setGitHubProject("RedMadRobot/itemsadapter")
+
+            licenses {
+                mit()
+            }
+
+            developers {
+                developer(id = "osipxd", name = "Osip Fatkullin", email = "o.fatkullin@redmadrobot.com")
+            }
+        }
+    }
 }
 
 subprojects {
