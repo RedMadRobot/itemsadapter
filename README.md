@@ -1,5 +1,5 @@
 # ItemsAdapter <GitHub path="RedMadRobot/itemsadapter"/>
-[![Version](https://img.shields.io/bintray/v/redmadrobot-opensource/android/itemsadapter?style=flat-square)][bintray] [![Build Status](https://img.shields.io/github/workflow/status/RedMadRobot/itemsadapter/CI/main?style=flat-square)][ci] [![License](https://img.shields.io/github/license/RedMadRobot/itemsadapter?style=flat-square)][license]
+[![Version](https://img.shields.io/maven-central/v/com.redmadrobot.itemsadapter/itemsadapter?style=flat-square)][mavenCentral] [![Build Status](https://img.shields.io/github/workflow/status/RedMadRobot/itemsadapter/CI/main?style=flat-square)][ci] [![License](https://img.shields.io/github/license/RedMadRobot/itemsadapter?style=flat-square)][license]
 
 The simple adapter to render static data in `RecyclerView`.
 
@@ -27,6 +27,7 @@ Add the dependency:
 ```groovy
 repositories {
     mavenCentral()
+    google()
 }
 
 dependencies {
@@ -114,7 +115,7 @@ For major changes, please open an issue first to discuss what you would like to 
 
 [MIT][license]
 
-[bintray]: https://bintray.com/redmadrobot-opensource/android/itemsadapter
+[mavenCentral]: https://search.maven.org/search?q=g:com.redmadrobot.itemsadapter
 [ci]: https://github.com/RedMadRobot/itemsadapter/actions
 [license]: LICENSE
 
