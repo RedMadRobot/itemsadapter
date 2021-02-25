@@ -27,6 +27,10 @@ redmadrobot {
     }
 }
 
+repositories {
+    jcenter() // TODO: Remove when detekt plugins will be moved to Maven Central
+}
+
 subprojects {
     group = "com.redmadrobot.itemsadapter"
     version = "1.2-SNAPSHOT"
