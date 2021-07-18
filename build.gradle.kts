@@ -1,17 +1,17 @@
-import com.redmadrobot.build.extension.*
+import com.redmadrobot.build.dsl.*
 
 plugins {
-    id("redmadrobot.root-project") version "0.8"
+    id("redmadrobot.root-project") version "0.11"
     `maven-publish`
 }
 
 apply(plugin = "redmadrobot.detekt")
 
 redmadrobot {
-    android.minSdk = 14
+    android.minSdk.set(14)
 
     publishing {
-        signArtifacts = true
+        signArtifacts.set(!isRunningOnCi)
 
         pom {
             setGitHubProject("RedMadRobot/itemsadapter")
@@ -25,10 +25,6 @@ redmadrobot {
             }
         }
     }
-}
-
-repositories {
-    jcenter() // TODO: Remove when detekt plugins will be moved to Maven Central
 }
 
 subprojects {
