@@ -6,6 +6,7 @@ plugins {
 description = "The simple adapter to render static data in RecyclerView"
 
 dependencies {
-    api("androidx.annotation:annotation:1.1.0")
-    api("androidx.recyclerview:recyclerview:1.1.0")
+    api(kotlin("stdlib", version = "1.5.21"))
+    api("androidx.annotation:annotation:1.2.0")
+    api("androidx.recyclerview:recyclerview:1.2.1")
 }
